@@ -1,59 +1,192 @@
-/* Reseta margens padrão e define o tamanho de caixa de forma previsivel */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Reseta margens padrão e define o tamanho da caixa de forma previsível */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    font-family: system-ui, -apple-system, sans-serif;
-    background-color: #0f172a;
-    color: #f8fafc;
+  min-height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: #516db4;
+  color: #669ac8;
 }
 
 .cartao {
-    width: 100%;
-    max-width: 420px;
-    background-color: #1e293b;
-    border-radius: 16px;
-    padding: 32px 24px;
-    text-align: center;
+  width: 100%;
+  max-width: 420px;
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 16px;
+  padding: 32px 24px;
+  text-align: center;
+   max-width: 420px;
+  margin: 0 auto;
 }
 
 h1 {
-    font-size: 1rem;
-    margin-bottom: 12px;
+  font-size: 1.6rem;
+  margin-bottom: 12px;
 }
 
 .bio {
-    color: #cbd5e1;
-    line-height: 1.5;
-    margin-bottom: 24px;
+  color: #cbd5e1;
+  line-height: 1.5;
+  margin-bottom: 24px;
 }
 
 .links {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
-.links a:{
-    text-decoration: none;
-    background-color: #2563eb;
-    color: #ffffff;
-    font-weight: 600;
-    padding: 12px 16px;
-    border-radius: 10px;
-    transition: background-color 0.2s ease, transform 0.2s ease;
+.links a {
+  text-decoration: none;
+  background-color: #513ec0;
+  color: #e2dee7;
+  font-weight: 600;
+  padding: 12px 16px;
+  border-radius: 10px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 .links a:hover {
-    background-color: #1d4ed8;
-    transform: translateY(-2px);
+  background-color: #171564;
+  transform: translateY(-2px);
+}
+
+/* Adiciona uma sombra sutil ao cartão para dar profundidade */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background-color: #0f172a;
+  color: #f8fafc;
+  padding: 24px;
+}
+
+/* 1. CSS GRID: Grade responsiva automática */
+.vitrine {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* 2. FLEXBOX: Organiza o conteúdo interno de cada card */
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 14px;
+  padding: 20px;
+}
+
+.card h2 {
+  font-size: 1.2rem;
+}
+
+.card p {
+  color: #cbd5e1;
+  line-height: 1.5;
+}
+
+/* Empurra o botão para o fundo do card mesmo se o texto for curto */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+/* 1. CSS GRID: Grade responsiva automática */
+.vitrine {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* 2. FLEXBOX: Organiza o conteúdo interno de cada card */
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 14px;
+  padding: 20px;
+}
+
+.card .btn-detalhes {
+  margin-top: auto;
+}
+.card h2 {
+  font-size: 1.2rem;
+}
+
+.card p {
+  color: #cbd5e1;
+  line-height: 1.5;
+}
+
+/* Empurra o botão para o fundo do card mesmo se o texto for curto */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* 1. CSS GRID: Grade responsiva automática */
+.vitrine {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* 2. FLEXBOX: Organiza o conteúdo interno de cada card */
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 14px;
+  padding: 20px;
+}
+
+.card h2 {
+  font-size: 1.2rem;
+}
+
+.card p {
+  color: #cbd5e1;
+  line-height: 1.5;
+}
+
+/* Empurra o botão para o fundo do card mesmo se o texto for curto */
+.btn {
+  margin-top: auto;
+  align-self: flex-start;
+  text-decoration: none;
+  background-color: #2563eb;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 10px 14px;
+  border-radius: 8px;
 }
 
