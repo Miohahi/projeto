@@ -1,19 +1,72 @@
-<section class="vitrine">
-  <article class="card">
-    <h2>Card 01</h2>
-    <p>Descrição curta do item ou projeto com texto variável.</p>
-    <a href="#" class="btn">Ver detalhes</a>
-  </article>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teste de Vidro Fosco</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-  <article class="card">
-    <h2>Card 02</h2>
-    <p>Este card tem um texto um pouco maior para testar o alinhamento do botão na base.</p>
-    <a href="#" class="btn">Ver detalhes</a>
-  </article>
+    body {
+      min-height: 200vh; /* Garante rolagem para testar o efeito */
+      font-family: sans-serif;
+      background: linear-gradient(135deg, #2563eb, #9333ea, #ec4899);
+      color: #ffffff;
+    }
 
-  <article class="card">
-    <h2>Card 03</h2>
-    <p>Outro card na grade.</p>
-    <a href="#" class="btn">Ver detalhes</a>
-  </article>
-</section>
+    .topo-vidro {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 32px;
+
+      /* Fundo semitransparente */
+      background-color: rgba(15, 23, 42, 0.55);
+
+      /* Desfoque do que passa por trás */
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+    }
+
+    .conteudo {
+      padding: 40px 32px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.15);
+      padding: 24px;
+      border-radius: 16px;
+      margin-bottom: 24px;
+    }
+  </style>
+</head>
+<body>
+  <header class="topo-vidro">
+    <strong>Meu Site</strong>
+    <span>Menu</span>
+  </header>
+
+  <main class="conteudo">
+    <div class="card">
+      <h2>Role a página para baixo</h2>
+      <p>Quando este cartão passar por trás do cabeçalho, você verá o desfoque acontecer.</p>
+    </div>
+    <div class="card">
+      <h2>Mais conteúdo</h2>
+      <p>Textos, imagens e cores atrás de um fundo semitransparente revelam o efeito de vidro fosco.</p>
+    </div>
+  </main>
+</body>
+</html>
